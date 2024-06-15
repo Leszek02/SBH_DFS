@@ -1,0 +1,22 @@
+<dna key="24072419" length="16" start="CCCT">
+	<probe pattern="NNNN">
+		<cell posL="5" posH="7">AAGA</cell>
+		<cell posL="7" posH="9">ACAG</cell>
+		<cell posL="7" posH="9">AGTA</cell>
+		<cell posL="11" posH="13">ATAA</cell>
+		<cell posL="1" posH="3">ATAG</cell>
+		<cell posL="11" posH="13">ATAG</cell>
+		<cell posL="4" posH="6">CACA</cell>
+		<cell posL="7" posH="9">CAGT</cell>
+		<cell posL="3" posH="5">CCCT</cell>
+		<cell posL="1" posH="3">CCTT</cell>
+		<cell posL="1" posH="3">CTTG</cell>
+		<cell posL="4" posH="6">GCAC</cell>
+		<cell posL="5" posH="7">GCCT</cell>
+		<cell posL="8" posH="10">GTAT</cell>
+		<cell posL="11" posH="13">GTTC</cell>
+		<cell posL="10" posH="12">TATA</cell>
+		<cell posL="3" posH="5">TGCA</cell>
+		<cell posL="1" posH="3">TTGC</cell>
+	</probe>
+</dna>

@@ -1,4 +1,7 @@
+#pragma once
 
+#ifndef STRUCTS_H
+#define STRUCTS_H
 struct vertex {
     string name;
     int posL;
@@ -12,3 +15,5 @@ struct oligonucleotid {
     int posL;
     int posH;
 };
+
+#endif

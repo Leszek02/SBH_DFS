@@ -8,12 +8,6 @@ bool perfectMatch(const oligonucleotid seq1, const oligonucleotid seq2) {
         if (i == length - 1)
             return true;
     }
-    i = 0;
-    while (seq1.sequence[i] == seq2.sequence[i + 1]) {
-        i++;
-        if (i == length - 1)
-            return true;
-    }
     return false;
 }
 
@@ -39,9 +33,11 @@ Graph::Graph (vector<oligonucleotid> oligonucleotides) {
     }
     int length = oligonucleotides.size();
     for (int i = 0; i < length; i++) {
+        int count = 0;
         for (int j = 0; j < length; j++) {
-            if (i != j and perfectMatch(oligonucleotides[i], oligonucleotides[j])) {
+            if (i != j && perfectMatch(oligonucleotides[i], oligonucleotides[j])) {
                 addEdge(oligonucleotides[i].sequence, oligonucleotides[j].sequence);
+                count++;
             }
         }
     }
