@@ -22,9 +22,9 @@ void traverseGraph(Graph& p, string& curSeq, string seq, int length, int curPos,
     return;
 }
 
-bool matchSequence(vector<oligonucleotid> oligonucleotides, string curSeq, int curPos) {
+bool matchSequence(vector<oligonucleotid> oligonucleotides, string curSeq, int probeLength,  int curPos) {
     for (oligonucleotid seq : oligonucleotides) {
-        if (seq.sequence == curSeq && curPos >= seq.posL && curPos <= seq.posH)
+        if (curSeq.compare(curSeq.length(), 0, seq.sequence) && curPos >= seq.posL && curPos <= seq.posH)
             return true;
     }
     return false;
@@ -34,7 +34,7 @@ void testResult(vector<string> toTest, vector<oligonucleotid> oligonucleotides, 
     for (string seq : toTest) {
         int pos = 1;
         string curSeq = seq.substr(0, probeLength);
-        while (matchSequence(oligonucleotides, curSeq, pos)) {
+        while (pos <= length - probeLength && matchSequence(oligonucleotides, curSeq, probeLength, pos)) {
             pos += 1;
             curSeq = seq.substr(pos, probeLength);
         }
